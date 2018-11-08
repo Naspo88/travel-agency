@@ -5,6 +5,7 @@ const autoprefixer = require('autoprefixer');
 const cssvars = require('postcss-simple-vars');
 const nest = require('postcss-nested');
 const cssimport = require('postcss-import');
+const browserSync = require('browser-sync').create();
 
 gulp.task('default', function () {
     gulp.start('watch');
@@ -21,11 +22,23 @@ gulp.task('css', function () {
 });
 
 gulp.task('watch', function () {
+    browserSync.init({
+        server: {
+            baseDir: "app"
+        },
+        notify: false
+    });
+
     watch('./app/index.html', function () {
-        gulp.start('html');
+        browserSync.reload();
     });
 
     watch('./app/assets/css/**/*.css', function () {
-        gulp.start('css');
+        gulp.start('cssInject');
     });
+});
+
+gulp.task('cssInject', ['css'], function () {
+    return gulp.src('./app/temp/css/style.css')
+        .pipe(browserSync.stream());    
 });
