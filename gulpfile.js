@@ -15,8 +15,8 @@ gulp.task('html', function () {
 });
 
 gulp.task('css', function () {
-    return gulp.src('./app/assets/css/**/*.css')
-        .pipe(postcss([cssvars, cssimport, nest, autoprefixer]))
+    return gulp.src('./app/assets/css/style.css')
+        .pipe(postcss([cssimport, cssvars, nest, autoprefixer]))
         .pipe(gulp.dest('./app/temp/css'));
 });
 
