@@ -1,0 +1,18 @@
+.header {
+    position: absolute;
+    z-index: 1;
+    background-color: rgba($mainBlue, .3);
+    width: 100%;
+    padding: 10px 0;
+
+    &__btn-container {
+        float: right;
+    }
+
+    &__logo {
+        position: absolute;
+        background-color: $mainBlue;
+        padding: 25px 36px;
+        top: 0;
+    }
+}
