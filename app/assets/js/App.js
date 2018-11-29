@@ -1,4 +1,3 @@
-import Person from './modules/Person';
+import MobileMenu from './modules/MobileMenu';
 
-var rob = new Person({ name: "Roberto Minghi", color: "blue"});
-rob.greet();
+const mobileMenu = new MobileMenu();
