@@ -1,10 +1,11 @@
-function Person(prs) {
-    this.name = prs.name;
-    this.color = prs.color;
-    this.greet = () => {
+export default class Person {
+    constructor(prs) {
+        this.name = prs.name;
+        this.color = prs.color;
+    }
+    
+    greet () {
         const { name, color } = this;
-        console.log("Hello I'm " + name + " and my color is " + color);
+        console.log("Hi there! I'm " + name + " and my color is " + color);
     }
 }
-
-module.exports = Person;
