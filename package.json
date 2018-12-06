@@ -20,6 +20,8 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-watch": "^5.0.1",
     "jquery-smooth-scroll": "^2.2.0",
+    "lazysizes": "^4.1.4",
+    "picturefill": "^3.0.3",
     "postcss-hexrgba": "^1.0.1",
     "postcss-import": "11.0.0",
     "postcss-mixins": "^6.2.0",
