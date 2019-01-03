@@ -5,15 +5,20 @@ const del = require('del');
 const svg2png = require('gulp-svg2png');
 
 const config = {
+    shape: {
+        spacing: {
+            padding: 1
+        }
+    },
     mode: {
         css: {
-            // variables: {
-            //     replaceSvgWithPng: () => {
-            //         return (sprite, render) => {
-            //             return render(sprite).split('.svg').join('.png');
-            //         }
-            //     }
-            // },
+            variables: {
+                replaceSvgWithPng: () => {
+                    return (sprite, render) => {
+                        return render(sprite).split('.svg').join('.png');
+                    }
+                }
+            },
             sprite: 'sprite.svg',
             render: {
                 css: {

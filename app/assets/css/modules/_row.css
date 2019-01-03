@@ -97,7 +97,7 @@
 
     /* Begin equal height rules */
 
-    &--equal-height {
+    .flexbox &--equal-height {
         &-at-medium {
             @mixin atMedium {
                 display: flex;
